@@ -1,0 +1,7 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/isandybe/public_html/zenmind/
+    - if [ -f $DEPLOYPATH/db.php ]; then cp $DEPLOYPATH/db.php /home/isandybe/db_backup_zenmind.php; fi
+    - /bin/cp -R * $DEPLOYPATH
+    - if [ -f /home/isandybe/db_backup_zenmind.php ]; then cp /home/isandybe/db_backup_zenmind.php $DEPLOYPATH/db.php; fi
