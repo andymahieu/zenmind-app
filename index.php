@@ -35,16 +35,20 @@ function getMoodEmoji($score) {
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
+        <?php
+        $themes = ['sage'=>['primary'=>'#6b9080','primary_hover'=>'#5a7c6f','accent'=>'#f6bd60'],'lavender'=>['primary'=>'#7c6b9f','primary_hover'=>'#6a5a8a','accent'=>'#c084fc'],'sunset'=>['primary'=>'#b05e38','primary_hover'=>'#93492a','accent'=>'#f97316']];
+        $t = $themes[$current_theme] ?? $themes['sage'];
+        ?>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         background: '#f8f9fa',
-                        primary: '#6b9080',
-                        'primary-hover': '#5a7c6f',
+                        primary: '<?= $t["primary"] ?>',
+                        'primary-hover': '<?= $t["primary_hover"] ?>',
                         'on-surface': '#2b2d42',
                         'surface-container': '#ffffff',
-                        'accent': '#f6bd60',
+                        'accent': '<?= $t["accent"] ?>',
                     },
                     fontFamily: {
                         sans: ['Outfit', 'sans-serif'],
@@ -60,7 +64,7 @@ function getMoodEmoji($score) {
             border: 1px solid rgba(107, 144, 128, 0.1);
         }
         .nav-active {
-            color: #6b9080;
+            color: <?= $t['primary'] ?>;
             font-weight: bold;
         }
         .nav-active span.material-symbols-outlined {
@@ -75,7 +79,10 @@ function getMoodEmoji($score) {
         <h1 class="text-3xl font-bold tracking-tight"><?= $lang['welcome_back'] ?>, <?= htmlspecialchars($username) ?></h1>
         <p class="text-on-surface/60 mt-1 italic text-sm max-w-xs"><?= $lang['quote_of_day'] ?></p>
     </div>
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-3">
+        <a href="settings.php" class="w-12 h-12 bg-surface-container rounded-full shadow-sm flex items-center justify-center text-on-surface/50 hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">settings</span>
+        </a>
         <a href="logout.php" class="w-12 h-12 bg-surface-container rounded-full shadow-sm flex items-center justify-center text-on-surface/50 hover:text-primary transition-colors">
             <span class="material-symbols-outlined">logout</span>
         </a>
@@ -104,25 +111,27 @@ function getMoodEmoji($score) {
     <div>
         <h2 class="text-lg font-bold mb-4 ml-2"><?= $lang['quick_actions'] ?></h2>
         
-        <a href="mood.php" class="block mb-4 glass-card rounded-3xl p-5 shadow-sm hover:shadow-md transition-all active:scale-95 group">
+        <a href="mood.php" class="block mb-3 glass-card rounded-3xl p-5 shadow-sm hover:shadow-md transition-all active:scale-95 group">
             <div class="flex items-center gap-5">
                 <div class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                     <span class="material-symbols-outlined text-3xl">mood</span>
                 </div>
                 <div class="flex-grow">
                     <h3 class="font-bold text-lg"><?= $lang['log_mood'] ?></h3>
+                    <p class="text-xs text-on-surface/40 mt-0.5"><?= $lang['nav_mood'] ?> &rarr; <a href="mood_history.php" class="underline text-primary/60" onclick="event.stopPropagation()"><?= $lang['nav_mood_history'] ?></a></p>
                 </div>
                 <span class="material-symbols-outlined text-on-surface/30">arrow_forward_ios</span>
             </div>
         </a>
 
-        <a href="journal.php" class="block mb-4 glass-card rounded-3xl p-5 shadow-sm hover:shadow-md transition-all active:scale-95 group">
+        <a href="journal.php" class="block mb-3 glass-card rounded-3xl p-5 shadow-sm hover:shadow-md transition-all active:scale-95 group">
             <div class="flex items-center gap-5">
                 <div class="w-14 h-14 rounded-2xl bg-accent/20 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-colors">
                     <span class="material-symbols-outlined text-3xl">edit_note</span>
                 </div>
                 <div class="flex-grow">
                     <h3 class="font-bold text-lg"><?= $lang['write_journal'] ?></h3>
+                    <p class="text-xs text-on-surface/40 mt-0.5"><?= $lang['nav_journal'] ?> &rarr; <a href="journal_history.php" class="underline text-primary/60" onclick="event.stopPropagation()"><?= $lang['nav_journal_history'] ?></a></p>
                 </div>
                 <span class="material-symbols-outlined text-on-surface/30">arrow_forward_ios</span>
             </div>
@@ -144,22 +153,26 @@ function getMoodEmoji($score) {
 </main>
 
 <nav class="fixed bottom-0 left-0 w-full bg-white/90 backdrop-blur-xl border-t border-primary/5 z-50 pb-safe">
-    <div class="flex justify-around items-center h-20 px-6 max-w-4xl mx-auto">
-        <a class="flex flex-col items-center justify-center nav-active" href="index.php">
+    <div class="flex justify-around items-center h-20 px-2 max-w-4xl mx-auto">
+        <a class="flex flex-col items-center justify-center nav-active px-2" href="index.php">
             <span class="material-symbols-outlined text-3xl">home_mini</span>
             <span class="text-xs font-semibold mt-1"><?= $lang['nav_home'] ?></span>
         </a>
-        <a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors" href="mood.php">
+        <a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors px-2" href="mood.php">
             <span class="material-symbols-outlined text-3xl">mood</span>
             <span class="text-xs font-semibold mt-1"><?= $lang['nav_mood'] ?></span>
         </a>
-        <a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors" href="journal.php">
+        <a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors px-2" href="journal.php">
             <span class="material-symbols-outlined text-3xl">edit_note</span>
             <span class="text-xs font-semibold mt-1"><?= $lang['nav_journal'] ?></span>
         </a>
-        <a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors" href="habits.php">
+        <a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors px-2" href="habits.php">
             <span class="material-symbols-outlined text-3xl">checklist</span>
             <span class="text-xs font-semibold mt-1"><?= $lang['nav_habits'] ?></span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-on-surface/40 hover:text-primary transition-colors px-2" href="settings.php">
+            <span class="material-symbols-outlined text-3xl">settings</span>
+            <span class="text-xs font-semibold mt-1"><?= $lang['nav_settings'] ?></span>
         </a>
     </div>
 </nav>
