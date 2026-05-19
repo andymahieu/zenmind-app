@@ -6,6 +6,7 @@ CREATE TABLE IF NOT EXISTS users (
     username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     language VARCHAR(10) DEFAULT 'nl',
+    theme VARCHAR(20) DEFAULT 'sage',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -33,6 +34,8 @@ CREATE TABLE IF NOT EXISTS habits (
     habit_name VARCHAR(100) NOT NULL,
     is_completed_today BOOLEAN DEFAULT FALSE,
     last_updated DATE,
+    streak INT DEFAULT 0,
+    best_streak INT DEFAULT 0,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );

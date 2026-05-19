@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'] ?? '';
 
     if ($username && $password) {
-        $stmt = $pdo->prepare("SELECT id, password, language FROM users WHERE username = ?");
+        $stmt = $pdo->prepare("SELECT id, password, language, theme FROM users WHERE username = ?");
         $stmt->execute([$username]);
         $user = $stmt->fetch();
 
@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (!empty($user['language'])) {
                 $_SESSION['lang'] = $user['language'];
             }
+            $_SESSION['theme'] = $user['theme'] ?? 'sage';
             header("Location: index.php");
             exit;
         } else {

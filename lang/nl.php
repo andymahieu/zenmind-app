@@ -56,4 +56,53 @@ $lang = [
     'habit_walk' => 'Korte wandeling',
     'save_habits' => 'Gewoontes updaten',
     'habits_saved' => 'Gewoontes bijgewerkt voor vandaag!',
+
+    // Premium Navigation
+    'nav_settings' => 'Instellingen',
+    'nav_mood_history' => 'Stemming Historie',
+    'nav_journal_history' => 'CBT Archief',
+
+    // Settings / Profiel
+    'settings_title' => 'Instellingen',
+    'profile_settings' => 'Profielinstellingen',
+    'theme_settings' => 'Kleurthema',
+    'theme_sage' => 'Cozy Sage 🌿',
+    'theme_lavender' => 'Soft Lavender 🪻',
+    'theme_sunset' => 'Warm Sunset 🌅',
+    'change_password' => 'Wachtwoord wijzigen',
+    'new_password' => 'Nieuw Wachtwoord',
+    'save_settings' => 'Instellingen Opslaan',
+    'settings_saved' => 'Instellingen succesvol opgeslagen!',
+    'password_mismatch' => 'Wachtwoorden komen niet overeen.',
+    'password_updated' => 'Wachtwoord succesvol bijgewerkt!',
+
+    // Mood History / Stats
+    'mood_history_title' => 'Stemmingsgeschiedenis',
+    'mood_history_subtitle' => 'Bekijk je emotionele reis over de tijd.',
+    'mood_stats' => 'Stemmingsstatistieken',
+    'mood_chart' => 'Wekelijkse Trend',
+    'mood_entries' => 'Logboek',
+    'no_moods_yet' => 'Je hebt nog geen stemmingen gelogd.',
+    'filter_all' => 'Alles',
+    'filter_7days' => 'Laatste 7 dagen',
+    'filter_30days' => 'Laatste 30 dagen',
+    'most_frequent_mood' => 'Meest voorkomende stemming',
+
+    // Journal History
+    'journal_history_title' => 'CBT Dagboekarchief',
+    'journal_history_subtitle' => 'Blader door je eerdere reflecties en inzichten.',
+    'no_journals_yet' => 'Je hebt nog geen dagboeknotities geschreven.',
+    'search_journal' => 'Doorzoek je dagboek...',
+    'read_more' => 'Lees hele reflectie',
+    'prompt_label' => 'Prompt',
+    'entry_label' => 'Jouw gedachten',
+
+    // Habits & Streaks
+    'streak_label' => 'Huidige Streak',
+    'best_streak_label' => 'Beste Streak',
+    'add_custom_habit' => 'Eigen Gewoonte Toevoegen',
+    'custom_habit_placeholder' => 'Bijv. Boek lezen, Gezond eten...',
+    'habit_added' => 'Gewoonte succesvol toegevoegd!',
+    'habit_deleted' => 'Gewoonte verwijderd.',
+    'delete_habit' => 'Verwijder',
 ];

@@ -56,4 +56,53 @@ $lang = [
     'habit_walk' => 'Courte promenade',
     'save_habits' => 'Mettre à jour les habitudes',
     'habits_saved' => 'Habitudes mises à jour pour aujourd\'hui !',
+
+    // Premium Navigation
+    'nav_settings' => 'Paramètres',
+    'nav_mood_history' => 'Historique d\'Humeur',
+    'nav_journal_history' => 'Archives TCC',
+
+    // Settings / Profile
+    'settings_title' => 'Paramètres',
+    'profile_settings' => 'Paramètres du profil',
+    'theme_settings' => 'Thème de couleur',
+    'theme_sage' => 'Cozy Sage 🌿',
+    'theme_lavender' => 'Soft Lavender 🪻',
+    'theme_sunset' => 'Warm Sunset 🌅',
+    'change_password' => 'Changer le mot de passe',
+    'new_password' => 'Nouveau mot de passe',
+    'save_settings' => 'Enregistrer les paramètres',
+    'settings_saved' => 'Paramètres enregistrés avec succès !',
+    'password_mismatch' => 'Les mots de passe ne correspondent pas.',
+    'password_updated' => 'Mot de passe mis à jour avec succès !',
+
+    // Mood History / Stats
+    'mood_history_title' => 'Historique d\'humeur',
+    'mood_history_subtitle' => 'Visualisez votre voyage émotionnel au fil du temps.',
+    'mood_stats' => 'Statistiques d\'humeur',
+    'mood_chart' => 'Tendance hebdomadaire',
+    'mood_entries' => 'Journal de bord',
+    'no_moods_yet' => 'Vous n\'avez pas encore enregistré d\'humeur.',
+    'filter_all' => 'Tout',
+    'filter_7days' => '7 derniers jours',
+    'filter_30days' => '30 derniers jours',
+    'most_frequent_mood' => 'Humeur la plus fréquente',
+
+    // Journal History
+    'journal_history_title' => 'Archives du Journal TCC',
+    'journal_history_subtitle' => 'Parcourez vos réflexions et perspectives passées.',
+    'no_journals_yet' => 'Vous n\'avez pas encore écrit d\'entrée de journal.',
+    'search_journal' => 'Rechercher dans votre journal...',
+    'read_more' => 'Lire toute la réflexion',
+    'prompt_label' => 'Question',
+    'entry_label' => 'Vos pensées',
+
+    // Habits & Streaks
+    'streak_label' => 'Série actuelle',
+    'best_streak_label' => 'Meilleure série',
+    'add_custom_habit' => 'Ajouter une habitude personnalisée',
+    'custom_habit_placeholder' => 'ex. Lire un livre, Manger sainement...',
+    'habit_added' => 'Habitude ajoutée avec succès !',
+    'habit_deleted' => 'Habitude supprimée.',
+    'delete_habit' => 'Supprimer',
 ];

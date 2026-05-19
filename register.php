@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Auto login
             $_SESSION['user_id'] = $pdo->lastInsertId();
             $_SESSION['username'] = $username;
+            $_SESSION['theme'] = 'sage';
             header("Location: index.php");
             exit;
         } catch (\PDOException $e) {

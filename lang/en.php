@@ -56,4 +56,53 @@ $lang = [
     'habit_walk' => 'Short Walk',
     'save_habits' => 'Update Habits',
     'habits_saved' => 'Habits updated for today!',
+
+    // Premium Navigation
+    'nav_settings' => 'Settings',
+    'nav_mood_history' => 'Mood History',
+    'nav_journal_history' => 'CBT Archive',
+
+    // Settings / Profile
+    'settings_title' => 'Settings',
+    'profile_settings' => 'Profile Settings',
+    'theme_settings' => 'Color Theme',
+    'theme_sage' => 'Cozy Sage 🌿',
+    'theme_lavender' => 'Soft Lavender 🪻',
+    'theme_sunset' => 'Warm Sunset 🌅',
+    'change_password' => 'Change Password',
+    'new_password' => 'New Password',
+    'save_settings' => 'Save Settings',
+    'settings_saved' => 'Settings successfully saved!',
+    'password_mismatch' => 'Passwords do not match.',
+    'password_updated' => 'Password successfully updated!',
+
+    // Mood History / Stats
+    'mood_history_title' => 'Mood History',
+    'mood_history_subtitle' => 'View your emotional journey over time.',
+    'mood_stats' => 'Mood Statistics',
+    'mood_chart' => 'Weekly Trend',
+    'mood_entries' => 'Logbook',
+    'no_moods_yet' => 'You haven\'t logged any moods yet.',
+    'filter_all' => 'All',
+    'filter_7days' => 'Last 7 days',
+    'filter_30days' => 'Last 30 days',
+    'most_frequent_mood' => 'Most frequent mood',
+
+    // Journal History
+    'journal_history_title' => 'CBT Journal Archive',
+    'journal_history_subtitle' => 'Browse through your past reflections and insights.',
+    'no_journals_yet' => 'You haven\'t written any journal entries yet.',
+    'search_journal' => 'Search your journal...',
+    'read_more' => 'Read Full Reflection',
+    'prompt_label' => 'Prompt',
+    'entry_label' => 'Your thoughts',
+
+    // Habits & Streaks
+    'streak_label' => 'Current Streak',
+    'best_streak_label' => 'Best Streak',
+    'add_custom_habit' => 'Add Custom Habit',
+    'custom_habit_placeholder' => 'e.g. Read a book, Eat healthy...',
+    'habit_added' => 'Habit successfully added!',
+    'habit_deleted' => 'Habit deleted.',
+    'delete_habit' => 'Delete',
 ];
